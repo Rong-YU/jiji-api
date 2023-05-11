@@ -7,19 +7,19 @@ import { AuthGuard } from '@nestjs/passport';
 export class UserController {
   constructor(private userService: UserService) {}
 
-  @Get()
-  getUsers() {
-    return this.userService.findAll();
-  }
+  //   @Get()
+  //   getUsers() {
+  //     return this.userService.findAll();
+  //   }
 
-  @UseGuards(AuthGuard('jwt'))
-  @Get(':id')
-  getUserById(id: number) {
-    return this.userService.findOne(id);
-  }
+  //   @UseGuards(AuthGuard('jwt'))
+  //   @Get(':id')
+  //   getUserById(id: number) {
+  //     return this.userService.findOne(id);
+  //   }
 
-  @Post()
-  createUser(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
+  //   @Post()
+  //   createUser(@Body() createUserDto: CreateUserDto) {
+  //     return this.userService.create(createUserDto);
+  //   }
 }
